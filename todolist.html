@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo</title>
+    <title>Todo List</title>
 
     <link rel="icon" type="image/x-icon" href="Images/ToDo Logo.png">
 
@@ -49,10 +49,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link " aria-current="page" href="#">ToDo List</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link lgin" href="#">Log In</a>
+                            <a class="nav-link lgin" id="logout" href="index.html">Log Out</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
@@ -91,62 +91,6 @@
 
     <div class="content col-lg-4 mx-auto">
 
-        <h2>Organize your life with ToDo</h2>
-        <br>
-        <button id="bstart">Get Started</button>
-
-        <!-- ! Log In start -->
-
-        <div class="login col-lg-12 formhead mx-auto">
-            <!--style="visibility: hidden;"-->
-
-            <span class="close">&times;</span>
-
-
-            <h3> Let's Log In</h3>
-            <br>
-
-            <form action="todolist.html" onsubmit="return validat(userValidate,pwdValidate);">
-                <div class="row mb-3">
-                    <label for="username" class="col-sm-2 col-form-label">Username</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="ubox" onkeyup="userValidate()" required>
-                        <p id="userMessage"></p>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="pwdbox" onkeyup="pwdValidate()" required>
-                        <p id="pwdMessage"></p>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-sm-10 offset-sm-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1" id="colRM">
-                                Remember Me
-                            </label>
-                            <a href="#" id="FTP">Forgotten the password?</a>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary" id="Log-In-Button">Log in</button>
-                <br>
-                <br>
-                <hr>
-                <div class="acc">
-                    <p>Don't have an account? <a href="#">Sign up!</a></p>
-
-                </div>
-
-            </form>
-        </div>
-
-        <!-- ! Log in end -->
-
 
     </div>
 
@@ -158,7 +102,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="JavaScript/home.js"></script>
+    <script src="JavaScript/todoList.js"></script>
 
 </body>
 
