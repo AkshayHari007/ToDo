@@ -1,11 +1,3 @@
-// var closebtns = document.getElementsByClassName("close");
-// var i;
-
-// for (i = 0; i < closebtns.length; i++) {
-//     closebtns[i].addEventListener("click", function () {
-//         this.parentElement.style.display = 'none';
-//     });
-// }
 $(document).ready(function () {
 
     $("#bstart").click(function () {
@@ -90,7 +82,7 @@ function pwdValidate() {
 }
 
 
-function validat(val1, val2) {
+function validate(val1, val2) {
 
     var a = val1();
     var b = val2();

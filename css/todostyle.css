@@ -1,0 +1,178 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ! Style for home page start*/
+
+.content {
+    /* margin-top: 4cm; */
+    /* padding: 70px 0; */
+    /* width: 100%; */
+    height: 585px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* overflow: scroll; */
+
+}
+
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    /* border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+    background-image: linear-gradient(180deg, rgba(255, 0, 0, 0.6) 0%, rgba(148, 0, 211, 0.6) 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
+.head h1 {
+    margin-top: 2.5cm;
+    /* padding: 70px 0; */
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.head {
+    background-image: linear-gradient(90deg, rgba(0, 153, 255, 0.3) 0%, rgba(145, 255, 1, 0.3) 99%);
+    border-radius: 10px;
+}
+
+
+
+
+/* ! log in Style Start */
+
+
+/* ! log in Style end */
+
+/* ! Style for home page ends*/
+
+/* ! Style for todo list start*/
+
+#logout:hover {
+    font-weight: bold;
+    color: crimson;
+    transition: .1s ease-in-out;
+}
+
+
+#done {
+    pointer-events: none;
+    margin-right: 1%;
+    zoom: 1.2;
+}
+
+#noAction {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+    margin-left: 1%;
+    display: inline;
+
+}
+
+#notDone {
+    margin-right: 1%;
+    zoom: 1.2;
+}
+
+#todo {
+
+    color: white;
+    font-weight: bold;
+    margin-left: 1%;
+    display: inline;
+
+}
+
+
+.box {
+    margin: 10px;
+}
+
+.hov:hover {
+    background-color: rgb(61, 97, 255);
+
+}
+
+/* .content {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+} */
+
+#ptag {
+
+    color: rgb(252, 248, 8);
+    margin-top: 5%;
+    margin-left: 60%;
+    width: 30%;
+    position: fixed;
+}
+
+/* ! Style for todo list ends*/
+
+.colour:nth-child(7n+1) {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.colour:nth-child(7n+2) {
+    background-color: rgba(255, 128, 0, 0.6);
+}
+
+.colour:nth-child(7n+3) {
+    background-color: rgba(255, 255, 0, 0.6);
+}
+
+.colour:nth-child(7n+4) {
+    background-color: rgba(0, 255, 0, 0.6);
+}
+
+.colour:nth-child(7n+5) {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.colour:nth-child(7n+6) {
+    background-color: rgba(76, 0, 130, 0.6);
+}
+
+.colour:nth-child(7n+7) {
+    background-color: rgba(148, 0, 211, 0.6);
+}
+
+.colour {
+    padding: 10px;
+    border-radius: 7px;
+
+}
+
+.colour:hover {
+    opacity: .8;
+    transition: .1s ease-in-out;
+}
+
+.maindiv {
+    margin: 5px
+}

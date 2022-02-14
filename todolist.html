@@ -15,10 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/todostyle.css">
 </head>
 
-<body background="./Images/planner-g2586de351_1920.jpg">
+<body background="./Images/notes.jpg">
 
     <!-- ! Navbar start -->
 
@@ -88,12 +88,14 @@
     <br> -->
 
     <!-- ! Content start -->
+    <div class="col-lg-5 maindiv">
+        <div class="head col-lg-12 mx-auto">
+            <h1>ToDo List</h1>
+        </div>
+        <div id="list" class="content col-lg-12 mx-auto">
 
-    <div class="content col-lg-4 mx-auto">
-
-
+        </div>
     </div>
-
     <!-- ! Content end-->
 
 
@@ -107,3 +109,32 @@
 </body>
 
 </html>
+
+
+
+<!-- <body onload="response()" oninput="s()">
+    <video autoplay muted loop id="myvid" src="video/todo.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <audio id="click" autoplay>
+        </audio>
+        <audio id="success" autoplay>
+        </audio>
+        <nav class="fixed-top nav nav-pills navbar-expand" style="background-color: rgba(12, 14, 14, 0.733);">
+            <div class=" container navbar-nav ">
+                <a style=" color: white; margin: 10px; border: 2px solid white;margin-left: 2%; padding-left: 20%; padding-right: 20%;"
+                    class="nav-item nav-link active" href="todo.html"> ToDo List </a>
+                <a style=" color: white; margin: 10px;border: 2px solid white; margin-left: 4%; padding-left: 20%; padding-right: 20%;"
+                    class="nav-item hov nav-link" href="index.html"> LogOut </a>
+            </div>
+        </nav>
+        <div class=" container" style="padding-top: 8%;">
+            <h1 style="font-family: fantasy; color: rgb(249, 249, 250); position: fixed;margin-left: 60%;">
+                My ToDo List </h1>
+            <p id="ptag"> Complete Any 5 Tasks </p>
+            <div class="container" style=" margin-top:8%;" id="result_area">
+            </div>
+        </div>
+        <script src="script.js">
+        </script>
+</body> -->

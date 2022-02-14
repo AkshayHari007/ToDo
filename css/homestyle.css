@@ -9,6 +9,8 @@ body {
     background-attachment: fixed;
 }
 
+/* ! Style for home page start*/
+
 .content {
     margin-top: 4cm;
     padding: 70px 0;
@@ -65,6 +67,7 @@ body {
 
 .close:hover {
     color: red;
+    transition: .2s ease-in-out;
     /* background: rgba(187, 187, 187, 0.637); */
 }
 
@@ -141,9 +144,3 @@ body {
 }
 
 /* ! log in Style end */
-
-#logout:hover {
-    font-weight: bold;
-    color: crimson;
-    transition: .1s ease-in-out;
-}
