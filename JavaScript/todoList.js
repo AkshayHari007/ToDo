@@ -1,15 +1,22 @@
+var element, note, done;
+var copy = [];
+
+var t = 0,
+    ct = 0,
+    nct = 0;
+
 $("document").ready(function () {
 
 
+
     $.get("https://jsonplaceholder.typicode.com/todos", (r) => {
+        t = r.length;
         for (let i = 0; i < r.length; i++) {
-            var element = r[i];
-            var note = element.title;
-            var done = element.completed;
-            // $("#list").append($('<div/>', {
-            //     class: "colour"
-            // }));
+            element = r[i];
+            note = element.title;
+            done = element.completed;
             if (done) {
+                ct++;
                 $("#list").append($('<div/>', {
                         class: "colour"
                     })
@@ -25,6 +32,7 @@ $("document").ready(function () {
                     .append("<label id='noAction'>" + note + "</label>")
                     .append("<br>"));
             } else {
+                nct++;
                 $("#list").append($('<div/>', {
                         class: "colour"
                     })
@@ -34,137 +42,62 @@ $("document").ready(function () {
                             // checked: "true",
                             name: "myCheckbox",
                             // value: "myValue",
-                            type: "checkbox"
+                            type: "checkbox",
+                            onchange: "checkfn(this);"
                         })
                     )
                     .append("<label id='todo'>" + note + "</label>")
                     .append("<br>"));
             }
-            // $("#list").append("<br> <hr>");
-            // $("#list").html("<hr>");
         }
+
+        $("#tot").html("Total number of tasks: " + t);
+        $("#ctot").html("Total number of tasks completed: " + ct);
+        $("#nctot").html("Total number of tasks to be completed: " + nct);
 
 
     });
 
-
-
 });
 
-
-
-
-
-
-
-
-// for (let i = 0; i < r.length; i++) {
-//     var element = r[i];
-//     var note = element.title;
-//     var done = element.completed;
-//     $("#list").append($('<div/>', {
-//         class: "colour"
-//     }));
-//     // $("#list").html("<input>");
-//     // $("input").attr("type", "checkbox");
-//     if (done == true) {
-//         $(".colour")
-//             .append(
-//                 $(document.createElement("input")).attr({
-//                     id: "done",
-//                     checked: "true",
-//                     name: "myCheckbox",
-//                     // value: "myValue",
-//                     type: "checkbox"
-//                 })
-//             );
-//         $(".colour").append("<label id='noAction'>" + note + "</label>");
-//     } else {
-//         $(".colour")
-//             .append(
-//                 $(document.createElement("input")).attr({
-//                     id: "notDone",
-//                     // checked: "true",
-//                     name: "myCheckbox",
-//                     // value: "myValue",
-//                     type: "checkbox"
-//                 })
-//             );
-//         $(".colour").append("<label id='todo'>" + note + "</label>");
-//     }
-
-//     $(".colour").append("<br> <hr>");
-//     // $("#list").html("<hr>");
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ! Promise
+var a = 0;
+var b = ct;
+var c = nct;
+console.log(t);
+
+
+function checkfn(v) {
+    if (v.checked) {
+        a++;
+        b++;
+        c--;
+
+    } else {
+        a--;
+        b--;
+        c++;
+    }
+
+
+    var p = new Promise(function (resolve, reject) {
+        if (a == 5) {
+            resolve(b, c);
+        } else {
+            reject(a, ct, nct);
+        }
+    });
+
+    p.then(function (x, y) {
+        $("#mes").html("Congratulation! You have completed 5 Tasks");
+        $("#tot").html("Total number of tasks: " + t);
+        $("#ctot").html("Total number of tasks completed: " + x);
+        $("#nctot").html("Total number of tasks to be completed: " + y);
+
+    }).catch(function (a, ct, nct) {
+
+    });
+}
 
 
 
