@@ -54,51 +54,96 @@ $("document").ready(function () {
         $("#tot").html("Total number of tasks: " + t);
         $("#ctot").html("Total number of tasks completed: " + ct);
         $("#nctot").html("Total number of tasks to be completed: " + nct);
-
-
     });
 
 });
 
+
+
 // ! Promise
 var a = 0;
-var b = ct;
-var c = nct;
-console.log(t);
+var b = 200;
+var c = 90;
+var d = 110;
+
 
 
 function checkfn(v) {
+
+
     if (v.checked) {
         a++;
-        b++;
-        c--;
+        c++;
+        d--;
+
 
     } else {
         a--;
-        b--;
-        c++;
+        c--;
+        d++;
+
     }
 
+    // console.log(c);
+    // console.log(d);
 
     var p = new Promise(function (resolve, reject) {
         if (a == 5) {
-            resolve(b, c);
+            resolve();
         } else {
-            reject(a, ct, nct);
+            reject(a);
         }
     });
 
-    p.then(function (x, y) {
-        $("#mes").html("Congratulation! You have completed 5 Tasks");
-        $("#tot").html("Total number of tasks: " + t);
-        $("#ctot").html("Total number of tasks completed: " + x);
-        $("#nctot").html("Total number of tasks to be completed: " + y);
+    p.then(function () {
 
-    }).catch(function (a, ct, nct) {
+        $("#mes").html("Congratulation! You have completed 5 Tasks");
+        $("#tot").html("Total number of tasks: " + b);
+        $("#ctot").html("Total number of tasks completed: " + c);
+        $("#nctot").html("Total number of tasks to be completed: " + d);
+        alert("Congratulation! You have completed 5 Tasks");
+
+    }).catch(function (a) {
+        if (a == 1) {
+            $("#mes").html("You have <b>four</b> more tasks left to complete.");
+            $("#tot").html("Total number of tasks: " + b);
+            $("#ctot").html("Total number of tasks completed: " + c);
+            $("#nctot").html("Total number of tasks to be completed: " + d);
+        }
+        if (a == 2) {
+            $("#mes").html("You have <b>three</b> more tasks left to complete.");
+            $("#tot").html("Total number of tasks: " + b);
+            $("#ctot").html("Total number of tasks completed: " + c);
+            $("#nctot").html("Total number of tasks to be completed: " + d);
+        }
+        if (a == 3) {
+            $("#mes").html("You have <b>two</b> more tasks left to complete.");
+            $("#tot").html("Total number of tasks: " + b);
+            $("#ctot").html("Total number of tasks completed: " + c);
+            $("#nctot").html("Total number of tasks to be completed: " + d);
+        }
+        if (a == 4) {
+            $("#mes").html("You have just <b>one</b> more tasks left to complete.");
+            $("#tot").html("Total number of tasks: " + b);
+            $("#ctot").html("Total number of tasks completed: " + c);
+            $("#nctot").html("Total number of tasks to be completed: " + d);
+        }
+        if (a == 90) {
+            $("#mes").html("Congratulation! You have completed all the tasks in the list.");
+            $("#tot").html("Total number of tasks: " + b);
+            $("#ctot").html("Total number of tasks completed: " + c);
+            $("#nctot").html("Total number of tasks to be completed: " + d);
+            alert("Congratulation! You have completed all the tasks in the list.");
+        }
+        if (a > 5 && a < 90) {
+            $("#mes").html("You have done more than expected! Keep up this good work😊");
+            $("#tot").html("Total number of tasks: " + b);
+            $("#ctot").html("Total number of tasks completed: " + c);
+            $("#nctot").html("Total number of tasks to be completed: " + d);
+        }
 
     });
 }
-
 
 
 
