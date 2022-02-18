@@ -51,9 +51,9 @@ $("document").ready(function () {
             }
         }
 
-        $("#tot").html("Total number of tasks: " + t);
-        $("#ctot").html("Total number of tasks completed: " + ct);
-        $("#nctot").html("Total number of tasks to be completed: " + nct);
+        $("#tot").html(`Total number of tasks: <b>${t}</b>`);
+        $("#ctot").html(`Total number of tasks completed: <b>${ct}</b>`);
+        $("#nctot").html(`Total number of tasks to be completed: <b>${nct}</b>`);
     });
 
 });
@@ -98,49 +98,49 @@ function checkfn(v) {
 
     p.then(function () {
 
-        $("#mes").html("Congratulation! You have completed 5 Tasks");
-        $("#tot").html("Total number of tasks: " + b);
-        $("#ctot").html("Total number of tasks completed: " + c);
-        $("#nctot").html("Total number of tasks to be completed: " + d);
-        alert("Congratulation! You have completed 5 Tasks");
+        $("#mes").html("Congratulation 👏 You have completed <b>five</b> Tasks");
+        $("#tot").html(`Total number of tasks:  <b>${b}</b>`);
+        $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+        $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
+        alert("Congratulation 👏 You have completed five Tasks");
 
     }).catch(function (a) {
         if (a == 1) {
             $("#mes").html("You have <b>four</b> more tasks left to complete.");
-            $("#tot").html("Total number of tasks: " + b);
-            $("#ctot").html("Total number of tasks completed: " + c);
-            $("#nctot").html("Total number of tasks to be completed: " + d);
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
         }
         if (a == 2) {
             $("#mes").html("You have <b>three</b> more tasks left to complete.");
-            $("#tot").html("Total number of tasks: " + b);
-            $("#ctot").html("Total number of tasks completed: " + c);
-            $("#nctot").html("Total number of tasks to be completed: " + d);
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
         }
         if (a == 3) {
             $("#mes").html("You have <b>two</b> more tasks left to complete.");
-            $("#tot").html("Total number of tasks: " + b);
-            $("#ctot").html("Total number of tasks completed: " + c);
-            $("#nctot").html("Total number of tasks to be completed: " + d);
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
         }
         if (a == 4) {
             $("#mes").html("You have just <b>one</b> more tasks left to complete.");
-            $("#tot").html("Total number of tasks: " + b);
-            $("#ctot").html("Total number of tasks completed: " + c);
-            $("#nctot").html("Total number of tasks to be completed: " + d);
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
         }
         if (a == 90) {
             $("#mes").html("Congratulation! You have completed all the tasks in the list.");
-            $("#tot").html("Total number of tasks: " + b);
-            $("#ctot").html("Total number of tasks completed: " + c);
-            $("#nctot").html("Total number of tasks to be completed: " + d);
-            alert("Congratulation! You have completed all the tasks in the list.");
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
+            alert("Congratulation 👏 You have completed all the tasks in the list.");
         }
         if (a > 5 && a < 90) {
-            $("#mes").html("You have done more than expected! Keep up this good work😊");
-            $("#tot").html("Total number of tasks: " + b);
-            $("#ctot").html("Total number of tasks completed: " + c);
-            $("#nctot").html("Total number of tasks to be completed: " + d);
+            $("#mes").html("You have done more than expected 💪 Keep up this good work 😊");
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
         }
 
     });

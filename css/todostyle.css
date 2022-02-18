@@ -63,7 +63,8 @@ body {
     text-align: center;
     font-family: cursive;
     font-weight: bolder;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-image: linear-gradient(45deg, rgb(25, 0, 255) 0%, rgb(255, 0, 0) 99%);
+    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -71,7 +72,7 @@ body {
 }
 
 .head {
-    background-image: linear-gradient(90deg, rgba(0, 153, 255, 0.3) 0%, rgba(145, 255, 1, 0.3) 99%);
+    background-image: linear-gradient(90deg, rgba(102, 255, 0, 0.3) 0%, rgba(238, 255, 1, 0.3) 99%);
     border-radius: 10px;
 }
 
@@ -82,6 +83,34 @@ body {
     text-align: center;
     font-family: cursive;
     font-weight: bolder;
+    color: deepskyblue;
+    text-shadow: 1px 1px 2px black,
+        0 0 15px deepskyblue,
+        0 0 5px darkblue;
+
+}
+
+.Dhead h3 {
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    color: rgb(34, 200, 255);
+    text-shadow: 1px 1px 2px black,
+        0 0 10px rgb(34, 200, 255),
+        0 0 5px darkblue;
+
+
+}
+
+.Dhead p {
+    font-family: cursive;
+    font-size: large;
+    color: navy;
+}
+
+#mes {
+    font-size: larger;
+    color: navy;
 }
 
 
