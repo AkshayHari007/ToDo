@@ -87,7 +87,7 @@ function checkfn(v) {
 
     // console.log(c);
     // console.log(d);
-    // test
+
 
     var p = new Promise(function (resolve, reject) {
         if (a == 5) {
