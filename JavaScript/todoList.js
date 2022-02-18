@@ -65,8 +65,8 @@ var a = 0;
 var b = 200;
 var c = 90;
 var d = 110;
-const click = new Audio("/Images/Click.mp3");
-const success = new Audio("/Images/Success.mp3");
+const click = new Audio("./Images/Click.mp3");
+const success = new Audio("./Images/Success.mp3");
 
 
 function checkfn(v) {
