@@ -103,9 +103,18 @@ function checkfn(v) {
         $("#tot").html(`Total number of tasks:  <b>${b}</b>`);
         $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
         $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
-        alert("Congratulation 👏 You have completed five Tasks");
+        setTimeout(function () {
+            alert("Congratulation 👏 You have completed five Tasks");
+        }, 750);
 
     }).catch(function (a) {
+        if (a == 0) {
+            click.play();
+            $("#mes").html(`Complete any <b>five</b> tasks`);
+            $("#tot").html(`Total number of tasks: <b>${b}</b>`);
+            $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
+            $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
+        }
         if (a == 1) {
             click.play();
             $("#mes").html("You have <b>four</b> more tasks left to complete.");
@@ -140,7 +149,9 @@ function checkfn(v) {
             $("#tot").html(`Total number of tasks: <b>${b}</b>`);
             $("#ctot").html(`Total number of tasks completed: <b>${c}</b>`);
             $("#nctot").html(`Total number of tasks to be completed: <b>${d}</b>`);
-            alert("Congratulation 👏 You have completed all the tasks in the list.");
+            setTimeout(function () {
+                alert("Congratulation 👏 You have completed all the tasks in the list.");
+            }, 750);
         }
         if (a > 5 && a < 90) {
             click.play();
